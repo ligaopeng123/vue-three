@@ -20,8 +20,9 @@
 </template>
 <script lang="ts" setup>
 import { reactive, watchEffect } from 'vue'
-import { get } from '@gaopeng123/fetch'
+import { get } from '@/utils/intercept'
 import { debounce } from '@gaopeng123/utils'
+import type { ChangeEvent } from 'ant-design-vue/es/_util/EventInterface';
 
 const state = reactive({
   data: [],
@@ -29,7 +30,7 @@ const state = reactive({
   fetching: false
 })
 
-let abortController = null
+let abortController: AbortController;
 
 const getData = debounce((value: string) => {
   if (abortController) {
@@ -56,7 +57,7 @@ const getData = debounce((value: string) => {
     })
 })
 
-const onChange = (v) => {}
+const onChange = (v: ChangeEvent) => {}
 
 watchEffect(() => {
   // 执行相应的操作

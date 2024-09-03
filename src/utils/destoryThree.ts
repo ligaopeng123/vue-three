@@ -13,7 +13,7 @@ export const destroyThree = (scene: THREE.Scene, renderer: THREE.WebGLRenderer, 
     scene.clear()
     renderer.dispose()
     renderer.forceContextLoss()
-    //@ts-nocheck
+    //@ts-ignore
     renderer = null
     // 去除animationFrame
     cancelAnimationFrame(animationID)

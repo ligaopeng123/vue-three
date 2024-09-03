@@ -4,12 +4,14 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import * as THREE from 'three'
+// @ts-ignore
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+// import { OrbitControls } from 'three/addons'
 import { destroyThree } from '@/utils/destoryThree'
 
 const container = ref(null)
 
-let scene, camera, renderer, controls, animationId
+let scene: THREE.Scene, camera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer, controls: OrbitControls, animationId: number
 
 // 渲染循环
 const animate = () => {
@@ -26,7 +28,9 @@ const init = () => {
 
   renderer = new THREE.WebGLRenderer({ antialias: true })
   renderer.setSize(window.innerWidth, window.innerHeight)
-  container.value.appendChild(renderer.domElement)
+  if (container.value) {
+    (container.value as HTMLElement).appendChild(renderer.domElement)
+  }
 
   // 使用 BufferGeometry 创建自定义 BOX
   const vertices = new Float32Array([

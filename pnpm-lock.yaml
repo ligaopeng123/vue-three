@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@gaopeng123/fetch': ^0.3.12
+  '@gaopeng123/fetch': ^0.3.13
   '@gaopeng123/utils': 1.1.18-alpha.2
   '@rushstack/eslint-patch': ^1.8.0
   '@tsconfig/node20': ^20.1.4
@@ -32,7 +32,7 @@ specifiers:
   vue-tsc: ^2.0.21
 
 dependencies:
-  '@gaopeng123/fetch': 0.3.12
+  '@gaopeng123/fetch': 0.3.13
   '@gaopeng123/utils': 1.1.18-alpha.2
   ant-design-vue: 4.2.3_vue@3.4.38
   pinia: 2.2.2_xnsczdfnjunlmil5ouo4a6ipsm
@@ -681,8 +681,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@gaopeng123/fetch/0.3.12:
-    resolution: {integrity: sha512-Z4oamAJ6xnoiBC+3ibjUt5xkl5k4/ZrkDMj9FzABw6nIYLdmgiOJqau1qHiU5P1o4OxxtUVcRdhMFjw6njBPtw==}
+  /@gaopeng123/fetch/0.3.13:
+    resolution: {integrity: sha512-LqP4/YFeTSYxUX+jbET/a7CI9SycKcMZH8MpaE/KhZw+nOrR5tgd5j0Tcrn5L5+zbPIc3B0IaC4VZchv6WwzIw==}
     engines: {node: '>=10'}
     dependencies:
       '@gaopeng123/utils.file': 1.1.18-alpha.2
